@@ -93,10 +93,10 @@ class MenuController
 
 
     if selection < @address_book.entries.count
-        puts @address_book.entries[selection]
+      puts @address_book.entries[selection]
     else
       puts "#{selection} is not valid input"
-      entries_submenu(entry)
+      main_menu
     end
   end
 
