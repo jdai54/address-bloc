@@ -25,6 +25,16 @@ end
     end
   end
 
+  describe "#destroy" do
+    it "deletes all entries in the address book" do
+      book.add_entry('Jake Dai', '1234567890', 'jdai@dai.com')
+      book.add_entry('John Doe', '0987654321', 'jdoe@doe.com')
+
+      book.destroy
+      expect(book.entries.size).to eq(0)
+    end
+
+  end
   describe "#add_entry" do
     it "adds only one entry to the address book" do
 
